@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang A</title>
+</head>
+<body>
+<h2>Trang A</h2>
+
+<!-- Hiển thị message nếu được set trong Model (/b) -->
+<h1 th:text="${message}">No message from Model</h1>
+
+<!-- Hiển thị message nếu được truyền qua param (/c) -->
+<h1 th:text="${param.message}">No message from Param</h1>
+
+</body>
+</html>
