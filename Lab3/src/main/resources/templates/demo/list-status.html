@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sách Staff - Trạng thái</title>
+</head>
+<body>
+<h2>Danh sách trạng thái Staff</h2>
+
+<table border="1" style="width:100%; text-align:center;">
+  <thead>
+  <tr>
+    <th rowspan="2">HỌ VÀ TÊN</th>
+    <th colspan="6">CÁC THUỘC TÍNH TRẠNG THÁI</th>
+  </tr>
+  <tr>
+    <th>Index</th>
+    <th>Count</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>Odd</th>
+    <th>Even</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="staff, st : ${list}"
+      th:style="@{(${st.odd} ? 'background-color:pink;' : 'background-color:cyan;')}">
+    <td th:text="${staff.fullname}"></td>
+    <td th:text="${st.index}"></td>
+    <td th:text="${st.count}"></td>
+    <td th:text="${st.first}"></td>
+    <td th:text="${st.last}"></td>
+    <td th:text="${st.odd}"></td>
+    <td th:text="${st.even}"></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
