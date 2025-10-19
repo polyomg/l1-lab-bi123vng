@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hình Chữ Nhật</title>
+</head>
+<body>
+<h2>Tính Diện Tích & Chu Vi Hình Chữ Nhật</h2>
+<form action="/rectangle/calc" method="post">
+    <label>Chiều dài: </label>
+    <input type="number" name="length" required><br><br>
+
+    <label>Chiều rộng: </label>
+    <input type="number" name="width" required><br><br>
+
+    <button type="submit">Tính</button>
+</form>
+
+<!-- Hiển thị kết quả -->
+<p th:text="${result}"></p>
+</body>
+</html>

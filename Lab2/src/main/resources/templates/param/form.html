@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Param Form</title>
+</head>
+<body>
+<form action="/param/save/2021" method="post">
+  <input name="y" value="2031">
+  <button>Save</button>
+</form>
+
+<ul style="list-style: none; display: flex; gap: 20px;">
+  <li>x là <span th:text="${x}">?x</span></li>
+  <li>y là <span th:text="${y}">?y</span></li>
+</ul>
+
+</body>
+</html>
